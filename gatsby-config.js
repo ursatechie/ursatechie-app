@@ -2,14 +2,14 @@ module.exports = {
 	siteMetadata: {
 		title: 'Documentation',
 	},
-	plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-typography'],
+	plugins: [
+		'gatsby-plugin-react-helmet',
+		{
+			resolve: 'gatsby-plugin-typography',
+			options: {
+				pathToConfigModule: 'src/utils/typography.js',
+			},
+		},
+	],
 	pathPrefix: '/ursatechie-app',
 }
-
-// module.exports = {
-// 	siteMetadata: {
-// 		title: 'Tyler Wong',
-// 	},
-// 	plugins: ['gatsby-plugin-react-helmet'],
-// 	pathPrefix: '/ursatechie-app',
-// }
