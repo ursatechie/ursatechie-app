@@ -2,7 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: 'Documentation',
 	},
-	plugins: ['gatsby-plugin-react-helmet'],
+	plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-typography'],
 	pathPrefix: '/ursatechie-app',
 }
 
