@@ -9,13 +9,13 @@ import PrimaryButton from '../components/primaryButton'
 const Layout = ({ children, data }) => (
 	<div>
 		<Helmet
-			title={data.site.siteMetadata.title}
+			title={data.site.siteMetadata.hello}
 			meta={[
 				{ name: 'description', content: 'Sample' },
 				{ name: 'keywords', content: 'sample, something' },
 			]}
 		/>
-		<Header siteTitle={data.site.siteMetadata.title} />
+		<Header siteTitle={data.site.siteMetadata.hello} />
 		<PrimaryButton />
 		<div
 			style={{
@@ -65,7 +65,7 @@ export const query = graphql`
 	query SiteTitleQuery {
 		site {
 			siteMetadata {
-				title
+				hello
 			}
 		}
 	}
