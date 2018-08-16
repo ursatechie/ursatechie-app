@@ -15,6 +15,7 @@ const Layout = ({ children, data }) => (
 				{ name: 'keywords', content: 'sample, something' },
 			]}
 		/>
+		<Header siteTitle={data.site.siteMetadata.title} />
 		<Header siteTitle={data.site.siteMetadata.hello} />
 		<PrimaryButton />
 		<div
@@ -65,6 +66,7 @@ export const query = graphql`
 	query SiteTitleQuery {
 		site {
 			siteMetadata {
+				title
 				hello
 			}
 		}
