@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
+		// title: 'Unity',
 		title: 'Documentation',
-		hello: 'hellos',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
