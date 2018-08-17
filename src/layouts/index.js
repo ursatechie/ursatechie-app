@@ -7,9 +7,16 @@ import './index.css'
 import './variables.css'
 import PrimaryButton from '../components/primaryButton'
 import ContentComponent from '../components/contentComponent'
+import styled, { isStyledComponent } from 'styled-components'
+
+const GlobalVariables = styled.div`
+	--inner-container-width: 800px;
+	--primary-color-light: lightpink;
+	--primary-color: pink;
+`
 
 const Layout = ({ children, data }) => (
-	<div>
+	<GlobalVariables>
 		{/* <Helmet
 			title={data.site.siteMetadata.title}
 			meta={[
@@ -59,7 +66,7 @@ const Layout = ({ children, data }) => (
 			</div>
 			<p>Posted April 09, 2011</p>
 		</div>
-	</div>
+	</GlobalVariables>
 )
 
 Layout.propTypes = {
