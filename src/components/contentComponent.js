@@ -11,7 +11,7 @@ const StyledContentWrapper = styled.div`
 	}
 `
 const StyledContent = styled.div`
-	align-items: center;
+	align-items: ${props => (props.left ? 'flex-start' : 'center')};
 	background: var(--primary);
 	color: var(--white);
 	display: flex;
@@ -21,18 +21,18 @@ const StyledContent = styled.div`
 	padding: 10px;
 `
 
-const Header = styled.div`
+const Heading = styled.div`
 	font-size: var(--h1);
 	font-weight: bold;
 `
 
 const Text = styled.div``
 
-const Content = ({ title, subtitle }) => (
+const Content = ({ heading, text, left }) => (
 	<StyledContentWrapper>
-		<StyledContent>
-			<Header>Heading</Header>
-			<Text>Text that relates to this heading</Text>
+		<StyledContent left={left}>
+			<Heading>{heading}</Heading>
+			<Text>{text}</Text>
 		</StyledContent>
 	</StyledContentWrapper>
 )

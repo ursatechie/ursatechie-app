@@ -38,8 +38,8 @@ const Layout = ({ children, data }) => (
 		/>
 		<Header siteTitle={data.site.siteMetadata.title} />
 		<ContentComponent
-			title="This is the Title"
-			subtitle="This is the best Sub-Title you have seen in the world."
+			heading="This is the Title"
+			text="This is the best Sub-Title you have seen in the world."
 		/>
 		<div
 			style={{

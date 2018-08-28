@@ -1,17 +1,21 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import ContentComponent from './contentComponent'
 
 const Header = ({ siteTitle }) => (
-	<div
+	<ContentComponent heading="Documentation" left />
+)
+
+{
+	/* <div
 		style={{
 			background: 'rebeccapurple',
-			marginBottom: '1.45rem',
 		}}
 	>
 		<div
 			style={{
 				margin: '0 auto',
-				maxWidth: 800,
+				maxWidth: 960,
 				padding: '1.45rem 1.0875rem',
 			}}
 		>
@@ -27,7 +31,6 @@ const Header = ({ siteTitle }) => (
 				</Link>
 			</h1>
 		</div>
-	</div>
-)
-
+	</div> */
+}
 export default Header
