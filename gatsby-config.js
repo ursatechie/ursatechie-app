@@ -11,6 +11,18 @@ module.exports = {
 				pathToConfigModule: 'src/utils/typography.js',
 			},
 		},
+		`gatsby-plugin-react-next`,
+		{
+			resolve: `@wapps/gatsby-plugin-material-ui`,
+			options: {
+				options: {
+					theme: {
+						primaryColor: '#9c27b0',
+					},
+					productionPrefix: 'c',
+				},
+			},
+		},
 	],
 	pathPrefix: '/ursatechie-app',
 }

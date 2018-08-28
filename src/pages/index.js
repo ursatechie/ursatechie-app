@@ -9,6 +9,7 @@ const IndexPage = () => (
 		<Link to="/page-2/">Go to page 2</Link>
 		<Link to="/page-3/">Go to page 3</Link>
 		<Link to="/ui/">Go to UI</Link>
+		<Link to="/material-ui/">Go to Material UI</Link>
 		<div className="container">
 			<div className="row">
 				<div className="col-sm-3">column-001</div>
