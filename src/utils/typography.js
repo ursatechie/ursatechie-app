@@ -7,7 +7,7 @@ import Typography from 'typography'
 // const typography = new Typography(oceanBeachTheme)
 
 const typography = new Typography({
-	baseFontSize: '12px',
+	baseFontSize: '18px',
 	baseLineHeight: 1.666,
 	headerFontFamily: [
 		'Roboto Slab',

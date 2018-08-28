@@ -3,9 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 
 const StyledContentWrapper = styled.div`
-	--var: 'test';
-
-	background: var(--primary-color-light);
+	background: var(--primary-light);
 	margin: 0 auto;
 
 	a {
@@ -13,14 +11,29 @@ const StyledContentWrapper = styled.div`
 	}
 `
 const StyledContent = styled.div`
-	background: var(--primary-color);
+	align-items: center;
+	background: var(--primary);
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
 	margin: 0 auto;
 	max-width: var(--inner-container-width);
+	padding: 10px;
 `
+
+const Header = styled.div`
+	font-size: var(--h1);
+	font-weight: bold;
+`
+
+const Text = styled.div``
 
 const Content = ({ title, subtitle }) => (
 	<StyledContentWrapper>
-		<StyledContent>asdf</StyledContent>
+		<StyledContent>
+			<Header>Heading</Header>
+			<Text>Text that relates to this heading</Text>
+		</StyledContent>
 	</StyledContentWrapper>
 )
 
