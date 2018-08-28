@@ -13,12 +13,16 @@ const GlobalVariables = styled.div`
 
 	--h1: 36px;
 
-	--primary: rgba(147, 149, 211, 1);
-	--primary-light: rgba(179, 183, 238, 1);
+	/* lavender */
+	--primary: rgba(147, 149, 211, 1); /* #9395D3 */
+	--primary-light: rgba(179, 183, 238, 1); /* #B3B7EE */
 
-	--white: rgba(251, 249, 255, 1);
-	--gray: rgba(162, 163, 187, 1);
-	--black: rgba(0, 8, 7, 1);
+	/* red */
+	--secondary: rgba(223, 35, 51, 1); /* #DF2333 */
+
+	--white: rgba(251, 249, 255, 1); /* #FBF9FF */
+	--gray: rgba(162, 163, 187, 1); /* #A2A3BB */
+	--black: rgba(0, 8, 7, 1); /* #000807 */
 
 	--color1: rgba(0, 8, 7, 1);
 	--color2: rgba(162, 163, 187, 1);
