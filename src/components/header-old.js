@@ -7,13 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 
 const Header = ({ siteTitle }) => (
-	<AppBar position="static" color="default">
-		<Toolbar>
-			<Typography variant="title" color="inherit">
-				{siteTitle}
-			</Typography>
-		</Toolbar>
-	</AppBar>
+	<ContentComponent heading="Documentation" left />
 )
 
 export default Header
