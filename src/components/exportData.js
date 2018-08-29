@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/Inbox'
 import DraftsIcon from '@material-ui/icons/Drafts'
 
-const MyDrawerItems = () => (
+const ExportData = () => (
 	<React.Fragment>
 		<ListItem button>
 			<ListItemIcon>
@@ -27,4 +27,11 @@ const MyDrawerItems = () => (
 	</React.Fragment>
 )
 
-export default MyDrawerItems
+export default ExportData
+
+let test = 'test'
+let test2 = 'test2'
+
+export { test, test2 }
+
+// https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default
