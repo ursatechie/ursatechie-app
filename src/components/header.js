@@ -9,8 +9,16 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import Button from '@material-ui/core/Button'
+import Drawer from '@material-ui/core/Drawer'
 
 class Header extends React.Component {
+	state = {
+		top: false,
+		left: false,
+		bottom: false,
+		right: false,
+	}
+
 	toggleDrawer = (side, open) => () => {
 		this.setState({
 			[side]: open,
@@ -20,12 +28,36 @@ class Header extends React.Component {
 	render() {
 		const { siteTitle } = this.props
 
+		const sideList = (
+			<div>
+				{/* <List>{mailFolderListItems}</List> */}
+				{/* <Divider /> */}
+				{/* <List>{otherMailFolderListItems}</List> */}
+				Side List Text
+			</div>
+		)
+
 		return (
 			<AppBar position="static" color="default">
 				<Toolbar>
+					<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
+
+					<Drawer
+						open={this.state.left}
+						onClose={this.toggleDrawer('left', false)}
+					>
+						<div
+							tabIndex={0}
+							role="button"
+							onClick={this.toggleDrawer('left', false)}
+							onKeyDown={this.toggleDrawer('left', false)}
+						>
+							{sideList}
+						</div>
+					</Drawer>
+
 					<IconButton color="inherit" aria-label="Menu">
 						<MenuIcon />
-						<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
 					</IconButton>
 					<Typography variant="title" color="inherit">
 						{siteTitle}
