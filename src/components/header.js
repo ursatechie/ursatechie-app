@@ -10,6 +10,11 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 import Button from '@material-ui/core/Button'
 import Drawer from '@material-ui/core/Drawer'
+import Divider from '@material-ui/core/Divider'
+import List from '@material-ui/core/List'
+
+// import { mailFolderListItems, otherMailFolderListItems } from './tileData'
+import mailFolderListItems from './tileData'
 
 class Header extends React.Component {
 	state = {
@@ -30,8 +35,8 @@ class Header extends React.Component {
 
 		const sideList = (
 			<div>
-				{/* <List>{mailFolderListItems}</List> */}
-				{/* <Divider /> */}
+				<List>{mailFolderListItems[1]}</List>
+				<Divider />
 				{/* <List>{otherMailFolderListItems}</List> */}
 				Side List Text
 			</div>
