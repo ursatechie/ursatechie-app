@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import Button from '@material-ui/core/Button'
-import Drawer from '@material-ui/core/Drawer'
+import SwipeableDrawer from '@material-ui/core/Drawer'
 import Divider from '@material-ui/core/Divider'
 import List from '@material-ui/core/List'
 import MyDrawerItems from './tileData'
@@ -47,9 +47,18 @@ class Header extends React.Component {
 		return (
 			<AppBar position="static" color="default">
 				<Toolbar>
-					<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
+					<IconButton
+						color="inherit"
+						aria-label="Open drawer"
+						onClick={this.toggleDrawer('left', true)}
+						className="open"
+					>
+						<MenuIcon />
+					</IconButton>
 
-					<Drawer
+					{/* <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button> */}
+
+					<SwipeableDrawer
 						open={this.state.left}
 						onClose={this.toggleDrawer('left', false)}
 					>
@@ -61,11 +70,8 @@ class Header extends React.Component {
 						>
 							{sideList}
 						</div>
-					</Drawer>
+					</SwipeableDrawer>
 
-					<IconButton color="inherit" aria-label="Menu">
-						<MenuIcon />
-					</IconButton>
 					<Typography variant="title" color="inherit">
 						{siteTitle}
 					</Typography>
