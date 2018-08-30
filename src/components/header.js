@@ -1,20 +1,35 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import ContentComponent from './contentComponent'
 import styled from 'styled-components'
+
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-
-import Button from '@material-ui/core/Button'
 import SwipeableDrawer from '@material-ui/core/Drawer'
 import Divider from '@material-ui/core/Divider'
 import List from '@material-ui/core/List'
-import MyDrawerItems from './tileData'
 
+import MenuIcon from '@material-ui/icons/Menu'
+
+import MyDrawerItems from './tileData'
 // import { mailFolderListItems, otherMailFolderListItems } from './tileData'
+
+const SideList = styled.div`
+	width: 250px;
+`
+const sideListBottomText = 'Tyler is awesome!'
+
+const sideList = (
+	<SideList>
+		<List>
+			<MyDrawerItems />
+		</List>
+		<Divider />
+		{/* <List>{otherMailFolderListItems}</List> */}
+
+		<Typography>{sideListBottomText}</Typography>
+	</SideList>
+)
 
 class Header extends React.Component {
 	state = {
@@ -32,17 +47,6 @@ class Header extends React.Component {
 
 	render() {
 		const { siteTitle } = this.props
-
-		const sideList = (
-			<div>
-				<List>
-					<MyDrawerItems />
-				</List>
-				<Divider />
-				{/* <List>{otherMailFolderListItems}</List> */}
-				Side List Text
-			</div>
-		)
 
 		return (
 			<AppBar position="static" color="default">
