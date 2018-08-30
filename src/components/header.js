@@ -16,7 +16,12 @@ import MyDrawerItems from './tileData'
 const SideList = styled.div`
 	width: 250px;
 `
-const sideListBottomText = 'Tyler is awesome!'
+const sideListBottomText = `Tyler Wong J, 2018`
+
+const SideListCaption = styled(Typography)`
+	font-style: italic;
+	padding: 10px;
+`
 
 const sideList = (
 	<SideList>
@@ -24,7 +29,9 @@ const sideList = (
 			<MyDrawerItems />
 		</List>
 		<Divider />
-		<Typography align="right">{sideListBottomText}</Typography>
+		<SideListCaption align="right" variant="caption">
+			{sideListBottomText}
+		</SideListCaption>
 	</SideList>
 )
 
