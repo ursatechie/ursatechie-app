@@ -3,6 +3,8 @@
 // export default tileData
 
 import React from 'react'
+import styled from 'styled-components'
+
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -12,8 +14,14 @@ import DraftsIcon from '@material-ui/icons/Drafts'
 
 import Link from 'gatsby-link'
 
+const S__MyDrawerItems = styled.div`
+	a {
+		text-decoration: none;
+	}
+`
+
 const MyDrawerItems = () => (
-	<React.Fragment>
+	<S__MyDrawerItems>
 		<Link to="/">
 			<ListItem button>
 				<ListItemIcon>
@@ -31,7 +39,7 @@ const MyDrawerItems = () => (
 				<ListItemText primary="Typography" />
 			</ListItem>
 		</Link>
-	</React.Fragment>
+	</S__MyDrawerItems>
 )
 
 export default MyDrawerItems
