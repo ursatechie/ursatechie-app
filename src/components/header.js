@@ -12,7 +12,6 @@ import List from '@material-ui/core/List'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import MyDrawerItems from './tileData'
-// import { mailFolderListItems, otherMailFolderListItems } from './tileData'
 
 const SideList = styled.div`
 	width: 250px;
@@ -25,9 +24,7 @@ const sideList = (
 			<MyDrawerItems />
 		</List>
 		<Divider />
-		{/* <List>{otherMailFolderListItems}</List> */}
-
-		<Typography>{sideListBottomText}</Typography>
+		<Typography align="right">{sideListBottomText}</Typography>
 	</SideList>
 )
 
@@ -84,19 +81,5 @@ class Header extends React.Component {
 		)
 	}
 }
-
-// const Header = ({ siteTitle }) => (
-// 	<AppBar position="static" color="default">
-// 		<Toolbar>
-// 			<IconButton color="inherit" aria-label="Menu">
-// 				<MenuIcon />
-// 				<Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
-// 			</IconButton>
-// 			<Typography variant="title" color="inherit">
-// 				{siteTitle}
-// 			</Typography>
-// 		</Toolbar>
-// 	</AppBar>
-// )
 
 export default Header
