@@ -2,6 +2,17 @@ module.exports = {
 	siteMetadata: {
 		// title: 'Unity',
 		title: 'Documentation',
+		pageLinks: [
+			'index',
+			'404',
+			'material-ui',
+			'typographyPage',
+			'index',
+			'page-2',
+			'ui',
+			'material-ui-2',
+			'page-3',
+		],
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

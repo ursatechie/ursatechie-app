@@ -1,11 +1,28 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const IndexPage = () => (
+import Typography from '@material-ui/core/Typography'
+
+const IndexPage = ({ children, data }) => (
 	<div>
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
+		<Typography variant="headline" component="h1">
+			Links
+		</Typography>
+
+		{data.site.siteMetadata.pageLinks.map((linkName, index) => {
+			return (
+				<div>
+					{linkName == 'index' && <Link to={`/`}>Home</Link>}
+
+					{linkName != 'index' && (
+						<Link to={`/${linkName}/`}>
+							{linkName} - {index}
+						</Link>
+					)}
+				</div>
+			)
+		})}
+
 		<Link to="/page-2/">Go to page 2</Link>
 		<Link to="/page-3/">Go to page 3</Link>
 		<Link to="/ui/">Go to UI</Link>
@@ -24,3 +41,13 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+export const query = graphql`
+	query SiteTitleQuery {
+		site {
+			siteMetadata {
+				pageLinks
+			}
+		}
+	}
+`

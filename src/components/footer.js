@@ -43,17 +43,14 @@ class Footer extends React.Component {
 	// }
 
 	render() {
-		const { siteTitle } = this.props
+		const { text, title } = this.props
 
 		return (
 			<Paper elevation={5}>
 				<Typography variant="headline" component="h3">
-					This is where the Footer should be at.
+					{title}
 				</Typography>
-				<Typography component="p">
-					The Footer is using Paper can be used to build surface or other
-					elements for your application.
-				</Typography>
+				<Typography component="p">{text}</Typography>
 			</Paper>
 		)
 	}

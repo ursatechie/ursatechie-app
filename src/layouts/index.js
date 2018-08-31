@@ -57,7 +57,11 @@ const Layout = ({ children, data }) => (
 		/>
 		<Body elevation={10}>{children()}</Body>
 
-		<Footer text="This is the footer text" />
+		<Footer
+			text="The Footer is using Paper can be used to build surface or other
+					elements for your application."
+			title="This is where the Footer should be at."
+		/>
 	</GlobalVariables>
 )
 
@@ -68,7 +72,7 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-	query SiteTitleQuery {
+	query SiteTitleQuery2 {
 		site {
 			siteMetadata {
 				title
