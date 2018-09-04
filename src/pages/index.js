@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 
 import Typography from '@material-ui/core/Typography'
 import CardComp from '../components/cardComp'
+import GridListComp from '../components/gridListComp'
 
 const IndexPage = ({ children, data }) => (
 	<div>
@@ -11,7 +12,7 @@ const IndexPage = ({ children, data }) => (
 		</Typography>
 		{data.site.siteMetadata.pageLinks.map((linkName, index) => {
 			return (
-				<div>
+				<div key={index}>
 					{linkName == 'index' && <Link to={`/`}>Home</Link>}
 
 					{linkName != 'index' && (
@@ -37,17 +38,23 @@ const IndexPage = ({ children, data }) => (
 			</div>
 		</div>
 		<CardComp />
-		hello
+
+		<GridListComp projects={data.site.siteMetadata.projects} />
 	</div>
 )
 
 export default IndexPage
 
 export const query = graphql`
-	query SiteTitleQuery {
+	query SitePageLinksProjectsQuery {
 		site {
 			siteMetadata {
 				pageLinks
+				projects {
+					img
+					author
+					title
+				}
 			}
 		}
 	}

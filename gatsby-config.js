@@ -13,6 +13,33 @@ module.exports = {
 			'material-ui-2',
 			'page-3',
 		],
+		projects: [
+			{
+				img: '1asdfasdfas',
+				title: 'title',
+				author: 'author',
+			},
+			{
+				img: '21asdfasdfas',
+				title: 'title',
+				author: 'author',
+			},
+			{
+				img: '31asdfasdfas',
+				title: 'title',
+				author: 'author',
+			},
+			{
+				img: '41asdfasdfas',
+				title: 'title',
+				author: 'asdfs',
+			},
+			{
+				img: '51asdfasdfas',
+				title: 'title',
+				author: 'author',
+			},
+		],
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

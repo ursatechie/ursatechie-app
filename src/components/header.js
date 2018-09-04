@@ -11,7 +11,7 @@ import List from '@material-ui/core/List'
 
 import MenuIcon from '@material-ui/icons/Menu'
 
-import MyDrawerItems from './tileData'
+import MyDrawerItems from './tileDataDrawerItems'
 
 const SideList = styled.div`
 	width: 250px;
