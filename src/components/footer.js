@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import PanoramaFishEyeIcon from '@material-ui/icons/PanoramaFishEye'
+import ExpandLessIcon from '@material-ui/icons/ExpandLess'
 
 import MenuIcon from '@material-ui/icons/Menu'
 
@@ -42,6 +43,15 @@ class Footer extends React.Component {
 	handleChange = (event, value) => {
 		this.setState({ value })
 	}
+
+	goBack() {
+		window.history.back()
+	}
+
+	goHome() {
+		window.location.href = '/'
+	}
+
 	// state = {
 	// 	top: false,
 	// 	left: false,
@@ -61,9 +71,16 @@ class Footer extends React.Component {
 
 		return (
 			<BottomNavigation value={value} onChange={this.handleChange} showLabels>
-				<BottomNavigationAction label="recents" icon={<RestoreIcon />} />
-				<BottomNavigationAction label="recents" icon={<FavoriteIcon />} />
-				<BottomNavigationAction label="recents" icon={<LocationOnIcon />} />
+				<BottomNavigationAction
+					label="Back"
+					icon={<ChevronLeftIcon />}
+					onClick={this.goBack}
+				/>
+				<BottomNavigationAction
+					label="Home"
+					icon={<PanoramaFishEyeIcon onClick={this.goHome} />}
+				/>
+				<BottomNavigationAction label="Drawer" icon={<ExpandLessIcon />} />
 			</BottomNavigation>
 		)
 	}
