@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Paper from '@material-ui/core/Paper'
 
-const ContentWrapper = styled.div`
+const ContentCompWrapper = styled.div`
 	background: var(--primary-light);
 	margin: 0 auto;
 
@@ -11,7 +11,7 @@ const ContentWrapper = styled.div`
 		color: black;
 	}
 `
-const S__Content = styled(Paper)`
+const S__Paper = styled(Paper)`
 	&& {
 		align-items: ${props => (props.left ? 'flex-start' : 'center')};
 		background: var(--primary);
@@ -32,12 +32,12 @@ const Heading = styled.div`
 const Text = styled.div``
 
 const Content = ({ heading, text, left }) => (
-	<ContentWrapper>
-		<S__Content elevation={5} left={left}>
+	<ContentCompWrapper>
+		<S__Paper elevation={5} left={left}>
 			<Heading>{heading}</Heading>
 			<Text>{text}</Text>
-		</S__Content>
-	</ContentWrapper>
+		</S__Paper>
+	</ContentCompWrapper>
 )
 
 export default Content

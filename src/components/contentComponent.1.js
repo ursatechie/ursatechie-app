@@ -28,7 +28,7 @@ const Heading = styled.div`
 
 const Text = styled.div``
 
-const Content = ({ heading, text, left }) => (
+const ContentComp = ({ heading, text, left }) => (
 	<StyledContentWrapper>
 		<StyledContent left={left}>
 			<Heading>{heading}</Heading>
@@ -66,4 +66,4 @@ const Content = ({ heading, text, left }) => (
 	</div> */
 }
 
-export default Content
+export default ContentComp

@@ -6,7 +6,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
 import PrimaryButton from '../components/primaryButton'
-import ContentComponent from '../components/contentComponent'
+import ContentComponent from '../components/contentComp'
 import styled, { isStyledComponent } from 'styled-components'
 
 import Paper from '@material-ui/core/Paper'
