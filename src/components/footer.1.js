@@ -4,12 +4,6 @@ import styled from 'styled-components'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 
-import BottomNavigation from '@material-ui/core/BottomNavigation'
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
-
 import MenuIcon from '@material-ui/icons/Menu'
 
 // const SideList = styled.div`
@@ -35,13 +29,6 @@ import MenuIcon from '@material-ui/icons/Menu'
 // )
 
 class Footer extends React.Component {
-	state = {
-		value: 0,
-	}
-
-	handleChange = (event, value) => {
-		this.setState({ value })
-	}
 	// state = {
 	// 	top: false,
 	// 	left: false,
@@ -57,26 +44,16 @@ class Footer extends React.Component {
 
 	render() {
 		const { text, title } = this.props
-		const { value } = this.state
 
 		return (
-			<BottomNavigation value={value} onChange={this.handleChange} showLabels>
-				<BottomNavigationAction label="recents" icon={<RestoreIcon />} />
-				<BottomNavigationAction label="recents" icon={<FavoriteIcon />} />
-				<BottomNavigationAction label="recents" icon={<LocationOnIcon />} />
-			</BottomNavigation>
+			<Paper elevation={5}>
+				<Typography variant="headline" component="h3">
+					{title}
+				</Typography>
+				<Typography component="p">{text}</Typography>
+			</Paper>
 		)
 	}
 }
 
-{
-	/* <Paper elevation={5}>
-	<Typography variant="headline" component="h3">
-		{title}
-	</Typography>
-	<Typography component="p">{text}</Typography>
-
-
-</Paper> */
-}
 export default Footer
