@@ -66,7 +66,7 @@ class Footer extends React.Component {
 	// }
 
 	render() {
-		const { text, title } = this.props
+		// const { footerValue } = this.props
 		const { value } = this.state
 
 		return (

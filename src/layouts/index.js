@@ -44,29 +44,40 @@ const Body = styled(Paper)`
 	padding-top: 0;
 `
 
-const Layout = ({ children, data }) => (
-	<GlobalVariables>
-		<Helmet
-			title={data.site.siteMetadata.title}
-			meta={[
-				{ name: 'description', content: 'Sample' },
-				{ name: 'keywords', content: 'sample, something' },
-			]}
-		/>
-		<Header siteTitle={data.site.siteMetadata.title} />
-		<ContentComponent
-			heading="This is the Title"
-			text="This is the best Sub-Title you have seen in the world."
-		/>
-		<Body elevation={10}>{children()}</Body>
+class Layout extends React.Component {
+	// state = {
+	// footerValue: 0,
+	// headerDrawerOpen: 0,
+	// }
 
-		<Footer
-			text="The Footer is using Paper can be used to build surface or other
+	render() {
+		const { children, data } = this.props
+
+		return (
+			<GlobalVariables>
+				<Helmet
+					title={data.site.siteMetadata.title}
+					meta={[
+						{ name: 'description', content: 'Sample' },
+						{ name: 'keywords', content: 'sample, something' },
+					]}
+				/>
+				<Header siteTitle={data.site.siteMetadata.title} />
+				<ContentComponent
+					heading="This is the Title"
+					text="This is the best Sub-Title you have seen in the world."
+				/>
+				<Body elevation={10}>{children()}</Body>
+
+				<Footer
+					text="The Footer is using Paper can be used to build surface or other
 					elements for your application."
-			title="This is where the Footer should be at."
-		/>
-	</GlobalVariables>
-)
+					title="This is where the Footer should be at."
+				/>
+			</GlobalVariables>
+		)
+	}
+}
 
 Layout.propTypes = {
 	children: PropTypes.func,
