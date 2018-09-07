@@ -38,7 +38,7 @@ const sideList = (
 class Header extends React.Component {
 	state = {
 		top: false,
-		left: false,
+		left: this.props.headerDrawerOpen,
 		bottom: false,
 		right: false,
 	}

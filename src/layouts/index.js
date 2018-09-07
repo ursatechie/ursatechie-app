@@ -45,10 +45,9 @@ const Body = styled(Paper)`
 `
 
 class Layout extends React.Component {
-	// state = {
-	// footerValue: 0,
-	// headerDrawerOpen: 0,
-	// }
+	state = {
+		headerDrawerOpen: true,
+	}
 
 	render() {
 		const { children, data } = this.props
@@ -62,7 +61,10 @@ class Layout extends React.Component {
 						{ name: 'keywords', content: 'sample, something' },
 					]}
 				/>
-				<Header siteTitle={data.site.siteMetadata.title} />
+				<Header
+					siteTitle={data.site.siteMetadata.title}
+					headerDrawerOpen={this.state.headerDrawerOpen}
+				/>
 				<ContentComponent
 					heading="This is the Title"
 					text="This is the best Sub-Title you have seen in the world."
