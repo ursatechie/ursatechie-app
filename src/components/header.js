@@ -58,9 +58,10 @@ class Header extends React.Component {
 					<IconButton
 						color="inherit"
 						aria-label="Open drawer"
-						onClick={this.toggleDrawer('left', true)}
+						onClick={this.props.toggleDrawer}
 						className="open"
 					>
+						{/* onClick={this.toggleDrawer('left', true)} */}
 						<MenuIcon />
 					</IconButton>
 

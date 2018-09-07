@@ -49,6 +49,11 @@ class Layout extends React.Component {
 		headerDrawerOpen: true,
 	}
 
+	toggleDrawer() {
+		this.setState({ headerDrawerOpen: !this.state.headerDrawerOpen })
+		alert(this.state.headerDrawerOpen)
+	}
+
 	render() {
 		const { children, data } = this.props
 
@@ -63,7 +68,7 @@ class Layout extends React.Component {
 				/>
 				<Header
 					siteTitle={data.site.siteMetadata.title}
-					headerDrawerOpen={this.state.headerDrawerOpen}
+					toggleDrawer={this.toggleDrawer.bind(this)}
 				/>
 				<ContentComponent
 					heading="This is the Title"
