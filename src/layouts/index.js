@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Cheese from '../components/cheese'
 import './index.css'
 import PrimaryButton from '../components/primaryButton'
 import ContentComponent from '../components/contentComp'
@@ -59,6 +60,7 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
+				<Cheese headerDrawerOpen={this.state.headerDrawerOpen} />
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -75,7 +77,6 @@ class Layout extends React.Component {
 					text="This is the best Sub-Title you have seen in the world."
 				/>
 				<Body elevation={10}>{children()}</Body>
-
 				<Footer
 					text="The Footer is using Paper can be used to build surface or other
 					elements for your application."
