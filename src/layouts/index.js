@@ -10,6 +10,8 @@ import PrimaryButton from '../components/primaryButton'
 import ContentComponent from '../components/contentComp'
 import styled, { isStyledComponent } from 'styled-components'
 
+import heroImage from '../images/jump.jpg'
+
 import Paper from '@material-ui/core/Paper'
 
 const GlobalVariables = styled.div`
@@ -75,7 +77,9 @@ class Layout extends React.Component {
 				<ContentComponent
 					heading="This is the Title"
 					text="This is the best Sub-Title you have seen in the world."
+					imgSrc={heroImage}
 				/>
+
 				<Body elevation={10}>{children()}</Body>
 				<Footer
 					text="The Footer is using Paper can be used to build surface or other
