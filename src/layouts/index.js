@@ -13,6 +13,7 @@ import styled, { isStyledComponent } from 'styled-components'
 import heroImage from '../images/jump.jpg'
 
 import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography'
 
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
@@ -49,12 +50,16 @@ const Body = styled(Paper)`
 
 class Layout extends React.Component {
 	state = {
-		headerDrawerOpen: true,
+		headerDrawerOpen: false,
+		inputText: '',
 	}
 
 	toggleDrawer() {
 		this.setState({ headerDrawerOpen: !this.state.headerDrawerOpen })
-		alert(this.state.headerDrawerOpen)
+	}
+
+	handleInput(e) {
+		this.setState({ inputText: e.target.value })
 	}
 
 	render() {
@@ -62,7 +67,12 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				<Cheese headerDrawerOpen={this.state.headerDrawerOpen} />
+				<input onChange={this.handleInput.bind(this)} />
+				<Typography>{this.state.inputText}</Typography>
+
+				{/* <Cheese headerDrawerOpen={this.state.headerDrawerOpen} /> */}
+				<Cheese headerDrawerOpen={this.state.inputText} />
+
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -71,6 +81,7 @@ class Layout extends React.Component {
 					]}
 				/>
 				<Header
+					headerDrawerOpen={this.state.headerDrawerOpen}
 					siteTitle={data.site.siteMetadata.title}
 					toggleDrawer={this.toggleDrawer.bind(this)}
 				/>

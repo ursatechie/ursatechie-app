@@ -9,14 +9,16 @@ class Cheese extends React.Component {
 	changeText() {
 		setTimeout(() => {
 			this.setState({ cheese: 'what' })
+			alert(this.props.headerDrawerOpen)
 			alert(this.state.cheese)
 		}, 300)
-		alert(this.props.headerDrawerOpen)
 	}
 
 	render() {
 		return (
 			<div>
+				{this.props.headerDrawerOpen}
+
 				<button onClick={this.changeText.bind(this)}>Button</button>
 
 				{this.state.cheese}

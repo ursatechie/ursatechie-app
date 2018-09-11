@@ -61,21 +61,18 @@ class Header extends React.Component {
 						onClick={this.props.toggleDrawer}
 						className="open"
 					>
-						{/* onClick={this.toggleDrawer('left', true)} */}
 						<MenuIcon />
 					</IconButton>
 
-					{/* <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button> */}
-
 					<SwipeableDrawer
-						open={this.state.left}
-						onClose={this.toggleDrawer('left', false)}
+						open={this.props.headerDrawerOpen}
+						onClose={this.props.toggleDrawer}
 					>
 						<div
 							tabIndex={0}
 							role="button"
-							onClick={this.toggleDrawer('left', false)}
-							onKeyDown={this.toggleDrawer('left', false)}
+							onClick={this.props.toggleDrawer}
+							onKeyDown={this.props.toggleDrawer}
 						>
 							{sideList}
 						</div>
