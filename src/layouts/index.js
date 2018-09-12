@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
-import Cheese from '../components/cheese'
 import './index.css'
 import PrimaryButton from '../components/primaryButton'
 import ContentComponent from '../components/contentComp'
@@ -14,7 +13,8 @@ import heroImage from '../images/jump.jpg'
 
 import Paper from '@material-ui/core/Paper'
 
-import InputTest from '../test/InputTest'
+import InputTest from '../test/inputTest'
+import AlertTest from '../test/alertTest'
 
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
@@ -63,9 +63,8 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				{/* <Cheese headerDrawerOpen={this.state.headerDrawerOpen} /> */}
 				<InputTest />
-				<Cheese headerDrawerOpen={this.state.inputText} />
+				<AlertTest />
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
