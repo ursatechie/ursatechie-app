@@ -21,12 +21,14 @@ const S__Paper = styled(Paper)`
 		margin: 0 auto;
 		max-width: var(--inner-container-width);
 		padding: 10px;
+
+		> * {
+			margin-bottom: 10px;
+		}
 	}
 `
 
-const Image = styled.img`
-	margin-bottom: 10px;
-`
+const Image = styled.img``
 
 const Heading = styled.div`
 	font-size: var(--h1);
@@ -35,12 +37,13 @@ const Heading = styled.div`
 
 const Text = styled.div``
 
-const Content = ({ heading, text, left, imgSrc }) => (
+const Content = ({ children, heading, text, left, imgSrc }) => (
 	<ContentCompWrapper>
 		<S__Paper elevation={5} left={left}>
 			<Image src={imgSrc} />
 			<Heading>{heading}</Heading>
 			<Text>{text}</Text>
+			{children}
 		</S__Paper>
 	</ContentCompWrapper>
 )

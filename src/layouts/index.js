@@ -63,8 +63,6 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				<InputTest />
-				<AlertTest />
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -77,11 +75,16 @@ class Layout extends React.Component {
 					siteTitle={data.site.siteMetadata.title}
 					toggleDrawer={this.toggleDrawer.bind(this)}
 				/>
+
 				<ContentComponent
 					heading="This is the Title"
 					text="This is the best Sub-Title you have seen in the world."
 					imgSrc={heroImage}
-				/>
+				>
+					<InputTest />
+					<AlertTest />
+				</ContentComponent>
+
 				<Body elevation={10}>{children()}</Body>
 				<Footer
 					text="The Footer is using Paper can be used to build surface or other
