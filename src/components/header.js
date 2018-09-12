@@ -36,19 +36,6 @@ const sideList = (
 )
 
 class Header extends React.Component {
-	state = {
-		top: false,
-		left: this.props.headerDrawerOpen,
-		bottom: false,
-		right: false,
-	}
-
-	toggleDrawer = (side, open) => () => {
-		this.setState({
-			[side]: open,
-		})
-	}
-
 	render() {
 		const { siteTitle } = this.props
 

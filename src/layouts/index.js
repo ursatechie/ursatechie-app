@@ -13,7 +13,8 @@ import styled, { isStyledComponent } from 'styled-components'
 import heroImage from '../images/jump.jpg'
 
 import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
+
+import InputTest from '../test/InputTest'
 
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
@@ -51,15 +52,10 @@ const Body = styled(Paper)`
 class Layout extends React.Component {
 	state = {
 		headerDrawerOpen: false,
-		inputText: '',
 	}
 
 	toggleDrawer() {
 		this.setState({ headerDrawerOpen: !this.state.headerDrawerOpen })
-	}
-
-	handleInput(e) {
-		this.setState({ inputText: e.target.value })
 	}
 
 	render() {
@@ -67,12 +63,9 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				<input onChange={this.handleInput.bind(this)} />
-				<Typography>{this.state.inputText}</Typography>
-
 				{/* <Cheese headerDrawerOpen={this.state.headerDrawerOpen} /> */}
+				<InputTest />
 				<Cheese headerDrawerOpen={this.state.inputText} />
-
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -90,7 +83,6 @@ class Layout extends React.Component {
 					text="This is the best Sub-Title you have seen in the world."
 					imgSrc={heroImage}
 				/>
-
 				<Body elevation={10}>{children()}</Body>
 				<Footer
 					text="The Footer is using Paper can be used to build surface or other
