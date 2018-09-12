@@ -18,11 +18,11 @@ class InputTest extends React.Component {
 
 	render() {
 		return (
-			<React.Fragment>
+			<div>
 				<input onChange={this.handleInput.bind(this)} />
 
 				<InputText>{this.state.inputText}</InputText>
-			</React.Fragment>
+			</div>
 		)
 	}
 }

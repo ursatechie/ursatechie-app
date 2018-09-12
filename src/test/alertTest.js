@@ -1,4 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledAlertTest = styled.div`
+	align-items: center;
+	display: flex;
+
+	> button {
+		margin-left: 5px;
+	}
+`
 
 class AlertTest extends React.Component {
 	state = {
@@ -9,8 +19,17 @@ class AlertTest extends React.Component {
 		alert(this.state.alertMessage)
 	}
 
+	handleInput(e) {
+		this.setState({ alertMessage: e.target.value })
+	}
+
 	render() {
-		return <button onClick={this.alert.bind(this)}>Alert</button>
+		return (
+			<StyledAlertTest>
+				<input type="text" onChange={this.handleInput.bind(this)} />
+				<button onClick={this.alert.bind(this)}>Alert</button>
+			</StyledAlertTest>
+		)
 	}
 }
 
