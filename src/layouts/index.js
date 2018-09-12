@@ -77,8 +77,8 @@ class Layout extends React.Component {
 				/>
 
 				<ContentComponent
-					heading="This is the Title"
-					text="This is the best Sub-Title you have seen in the world."
+					heading="Test Components"
+					text="These components are to test out the functionality that you can implement using React."
 					imgSrc={heroImage}
 				>
 					<InputTest />
