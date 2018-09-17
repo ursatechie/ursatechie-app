@@ -90,6 +90,7 @@ class Layout extends React.Component {
 					text="The Footer is using Paper can be used to build surface or other
 					elements for your application."
 					title="This is where the Footer should be at."
+					toggleDrawer={this.toggleDrawer.bind(this)}
 				/>
 			</GlobalVariables>
 		)

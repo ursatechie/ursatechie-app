@@ -35,6 +35,13 @@ import MenuIcon from '@material-ui/icons/Menu'
 // 	</SideList>
 // )
 
+const S__Footer = styled(Paper)`
+	margin: 0 auto;
+	max-width: var(--inner-container-width);
+	padding: 0px;
+	padding-top: 0;
+`
+
 class Footer extends React.Component {
 	state = {
 		value: 0,
@@ -70,18 +77,24 @@ class Footer extends React.Component {
 		const { value } = this.state
 
 		return (
-			<BottomNavigation value={value} onChange={this.handleChange} showLabels>
-				<BottomNavigationAction
-					label="Back"
-					icon={<ChevronLeftIcon />}
-					onClick={this.goBack}
-				/>
-				<BottomNavigationAction
-					label="Home"
-					icon={<PanoramaFishEyeIcon onClick={this.goHome} />}
-				/>
-				<BottomNavigationAction label="Drawer" icon={<ExpandLessIcon />} />
-			</BottomNavigation>
+			<S__Footer elevation={10}>
+				<BottomNavigation value={value} onChange={this.handleChange} showLabels>
+					<BottomNavigationAction
+						label="Back"
+						icon={<ChevronLeftIcon />}
+						onClick={this.goBack}
+					/>
+					<BottomNavigationAction
+						label="Home"
+						icon={<PanoramaFishEyeIcon onClick={this.goHome} />}
+					/>
+					<BottomNavigationAction
+						label="Drawer"
+						icon={<ExpandLessIcon />}
+						onClick={this.props.toggleDrawer}
+					/>
+				</BottomNavigation>
+			</S__Footer>
 		)
 	}
 }
