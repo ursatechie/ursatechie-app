@@ -72,8 +72,8 @@ class Layout extends React.Component {
 				/>
 				<Header
 					headerDrawerOpen={this.state.headerDrawerOpen}
-					siteTitle={data.site.siteMetadata.title}
 					toggleDrawer={this.toggleDrawer.bind(this)}
+					siteTitle={data.site.siteMetadata.title}
 				/>
 
 				<ContentComponent

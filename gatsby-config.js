@@ -1,6 +1,5 @@
 module.exports = {
 	siteMetadata: {
-		// title: 'Unity',
 		title: 'Documentation',
 		pageLinks: [
 			'index',
