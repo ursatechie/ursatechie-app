@@ -12,28 +12,7 @@ import List from '@material-ui/core/List'
 import MenuIcon from '@material-ui/icons/Menu'
 
 import MyDrawerItems from './tileDataDrawerItems'
-
-const SideList = styled.div`
-	width: 250px;
-`
-const sideListBottomText = `Tyler Wong J, 2018`
-
-const SideListCaption = styled(Typography)`
-	font-style: italic;
-	padding: 10px;
-`
-
-const sideList = (
-	<SideList>
-		<List>
-			<MyDrawerItems />
-		</List>
-		<Divider />
-		<SideListCaption align="right" variant="caption">
-			{sideListBottomText}
-		</SideListCaption>
-	</SideList>
-)
+import Drawer from './drawer'
 
 class Header extends React.Component {
 	render() {
@@ -61,7 +40,7 @@ class Header extends React.Component {
 							onClick={this.props.toggleDrawer}
 							onKeyDown={this.props.toggleDrawer}
 						>
-							{sideList}
+							<Drawer />
 						</div>
 					</SwipeableDrawer>
 

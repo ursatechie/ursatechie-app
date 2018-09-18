@@ -16,6 +16,8 @@ import Paper from '@material-ui/core/Paper'
 import InputTest from '../test/inputTest'
 import AlertTest from '../test/alertTest'
 
+import Icon from '@material-ui/core/Icon'
+
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
 
@@ -63,6 +65,10 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
+				{/* <link
+					rel="stylesheet"
+					href="https://fonts.googleapis.com/icon?family=Material+Icons"
+				/> */}
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -81,6 +87,7 @@ class Layout extends React.Component {
 					text="These components are to test out the functionality that you can implement using React."
 					imgSrc={heroImage}
 				>
+					<Icon>star</Icon>
 					<InputTest />
 					<AlertTest />
 				</ContentComponent>
