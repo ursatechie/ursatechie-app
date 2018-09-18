@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider'
 import List from '@material-ui/core/List'
 
 import MenuIcon from '@material-ui/icons/Menu'
+import Icon from '@material-ui/core/Icon'
 
 import MyDrawerItems from './tileDataDrawerItems'
 
@@ -27,6 +28,7 @@ class Drawer extends React.Component {
 	render() {
 		return (
 			<S__Drawer>
+				<Icon>star</Icon>
 				<List>
 					<MyDrawerItems />
 				</List>

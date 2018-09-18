@@ -65,10 +65,11 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				{/* <link
+				{/* Material Icons for icons like - <Icon>star</Icon> */}
+				<link
 					rel="stylesheet"
 					href="https://fonts.googleapis.com/icon?family=Material+Icons"
-				/> */}
+				/>
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[

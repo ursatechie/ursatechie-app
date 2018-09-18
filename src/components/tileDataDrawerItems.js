@@ -12,6 +12,8 @@ import ListItemText from '@material-ui/core/ListItemText'
 import InboxIcon from '@material-ui/icons/Inbox'
 import DraftsIcon from '@material-ui/icons/Drafts'
 
+import Icon from '@material-ui/core/Icon'
+
 const navItems = [
 	{
 		icon: 'Drafts',
@@ -31,6 +33,7 @@ const MyDrawerItems = () => (
 	<S__MyDrawerItems>
 		{navItems.map(navItem => (
 			<div>
+				<Icon>star</Icon>
 				{navItem.icon} - {navItem.text}
 			</div>
 		))}
