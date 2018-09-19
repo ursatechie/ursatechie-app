@@ -16,7 +16,7 @@ import Drawer from './drawer'
 
 class Header extends React.Component {
 	render() {
-		const { siteTitle, navItems } = this.props
+		const { siteTitle, navItems, navFooterText } = this.props
 
 		return (
 			<AppBar position="static" color="default">
@@ -40,7 +40,7 @@ class Header extends React.Component {
 							onClick={this.props.toggleDrawer}
 							onKeyDown={this.props.toggleDrawer}
 						>
-							<Drawer navItems={navItems} />
+							<Drawer navItems={navItems} navFooterText={navFooterText} />
 						</div>
 					</SwipeableDrawer>
 

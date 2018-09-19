@@ -82,6 +82,7 @@ class Layout extends React.Component {
 					navItems={data.site.siteMetadata.navItems}
 					toggleDrawer={this.toggleDrawer.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
+					navFooterText={data.site.siteMetadata.navFooterText}
 				/>
 
 				<ContentComponent
@@ -121,6 +122,7 @@ export const query = graphql`
 					icon
 					text
 				}
+				navFooterText
 			}
 		}
 	}
