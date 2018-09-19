@@ -6,18 +6,11 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import './index.css'
 import PrimaryButton from '../components/primaryButton'
-import ContentComponent from '../components/contentComp'
 import styled, { isStyledComponent } from 'styled-components'
-
-import heroImage from '../images/jump.jpg'
 
 import Paper from '@material-ui/core/Paper'
 
-import InputTest from '../test/inputTest'
-import AlertTest from '../test/alertTest'
-
-import Icon from '@material-ui/core/Icon'
-
+import Imports from '../components/imports'
 import SideNavigation from '../components/sideNavigation'
 
 const GlobalVariables = styled.div`
@@ -67,11 +60,8 @@ class Layout extends React.Component {
 
 		return (
 			<GlobalVariables>
-				{/* Material Icons for icons like - <Icon>star</Icon> */}
-				<link
-					rel="stylesheet"
-					href="https://fonts.googleapis.com/icon?family=Material+Icons"
-				/>
+				<Imports />
+
 				<Helmet
 					title={data.site.siteMetadata.title}
 					meta={[
@@ -79,6 +69,7 @@ class Layout extends React.Component {
 						{ name: 'keywords', content: 'sample, something' },
 					]}
 				/>
+
 				<Header
 					toggleDrawer={this.toggleSideNavigation.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
@@ -91,17 +82,8 @@ class Layout extends React.Component {
 					navFooterText={data.site.siteMetadata.navFooterText}
 				/>
 
-				<ContentComponent
-					heading="Test Components"
-					text="These components are to test out the functionality that you can implement using React."
-					imgSrc={heroImage}
-				>
-					<Icon>star</Icon>
-					<InputTest />
-					<AlertTest />
-				</ContentComponent>
-
 				<Body elevation={10}>{children()}</Body>
+
 				<Footer
 					text="The Footer is using Paper can be used to build surface or other
 					elements for your application."

@@ -1,12 +1,30 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import Typography from '@material-ui/core/Typography'
 import CardComp from '../components/cardComp'
 import GridListComp from '../components/gridListComp'
+import ContentComponent from '../components/contentComp'
+
+import heroImage from '../images/jump.jpg'
+import InputTest from '../test/inputTest'
+import AlertTest from '../test/alertTest'
+
+import Icon from '@material-ui/core/Icon'
 
 const IndexPage = ({ children, data }) => (
 	<div>
+		<ContentComponent
+			heading="Test Components"
+			text="These components are to test out the functionality that you can implement using React."
+			imgSrc={heroImage}
+		>
+			<Icon>star</Icon>
+			<InputTest />
+			<AlertTest />
+		</ContentComponent>
+
 		<Typography variant="headline" component="h1">
 			Links
 		</Typography>
