@@ -17,8 +17,8 @@ import InputTest from '../test/inputTest'
 import AlertTest from '../test/alertTest'
 
 import Icon from '@material-ui/core/Icon'
-import SwipeableDrawer from '@material-ui/core/Drawer'
-import Drawer from '../components/drawer'
+
+import SideNavigation from '../components/sideNavigation'
 
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
@@ -55,11 +55,11 @@ const Body = styled(Paper)`
 
 class Layout extends React.Component {
 	state = {
-		headerDrawerOpen: false,
+		sideNavigationOpen: false,
 	}
 
-	toggleDrawer() {
-		this.setState({ headerDrawerOpen: !this.state.headerDrawerOpen })
+	toggleSideNavigation() {
+		this.setState({ sideNavigationOpen: !this.state.sideNavigationOpen })
 	}
 
 	render() {
@@ -80,26 +80,16 @@ class Layout extends React.Component {
 					]}
 				/>
 				<Header
-					toggleDrawer={this.toggleDrawer.bind(this)}
+					toggleDrawer={this.toggleSideNavigation.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
 				/>
 
-				<SwipeableDrawer
-					open={this.state.headerDrawerOpen}
-					onClose={this.toggleDrawer.bind(this)}
-				>
-					<div
-						tabIndex={0}
-						role="button"
-						onClick={this.props.toggleDrawer}
-						onKeyDown={this.props.toggleDrawer}
-					>
-						<Drawer
-							navItems={data.site.siteMetadata.navItems}
-							navFooterText={data.site.siteMetadata.navFooterText}
-						/>
-					</div>
-				</SwipeableDrawer>
+				<SideNavigation
+					sideNavigationOpen={this.state.sideNavigationOpen}
+					toggleSideNavigation={this.toggleSideNavigation.bind(this)}
+					navItems={data.site.siteMetadata.navItems}
+					navFooterText={data.site.siteMetadata.navFooterText}
+				/>
 
 				<ContentComponent
 					heading="Test Components"
@@ -116,7 +106,7 @@ class Layout extends React.Component {
 					text="The Footer is using Paper can be used to build surface or other
 					elements for your application."
 					title="This is where the Footer should be at."
-					toggleDrawer={this.toggleDrawer.bind(this)}
+					toggleDrawer={this.toggleSideNavigation.bind(this)}
 				/>
 			</GlobalVariables>
 		)
