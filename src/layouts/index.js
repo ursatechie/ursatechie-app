@@ -79,6 +79,7 @@ class Layout extends React.Component {
 				/>
 				<Header
 					headerDrawerOpen={this.state.headerDrawerOpen}
+					navItems={data.site.siteMetadata.navItems}
 					toggleDrawer={this.toggleDrawer.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
 				/>
@@ -116,6 +117,10 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				title
+				navItems {
+					icon
+					text
+				}
 			}
 		}
 	}

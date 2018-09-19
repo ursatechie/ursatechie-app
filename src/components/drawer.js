@@ -26,11 +26,13 @@ const DrawerCaption = styled(Typography)`
 
 class Drawer extends React.Component {
 	render() {
+		const { navItems } = this.props
+
 		return (
 			<S__Drawer>
 				<Icon>star</Icon>
 				<List>
-					<MyDrawerItems />
+					<MyDrawerItems navItems={navItems} />
 				</List>
 				<Divider />
 				<DrawerCaption align="right" variant="caption">

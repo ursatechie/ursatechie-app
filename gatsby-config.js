@@ -39,6 +39,16 @@ module.exports = {
 				author: 'author',
 			},
 		],
+		navItems: [
+			{
+				icon: 'inbox',
+				text: 'Home',
+			},
+			{
+				icon: 'drafts',
+				text: 'Typography',
+			},
+		],
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
