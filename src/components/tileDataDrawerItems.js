@@ -22,7 +22,7 @@ const S__MyDrawerItems = styled.div`
 const MyDrawerItems = ({ navItems }) => (
 	<S__MyDrawerItems>
 		{navItems.map((navItem, index) => (
-			<Link to="/">
+			<Link key={index} to="/">
 				<ListItem button>
 					<ListItemIcon>
 						<Icon>{navItem.icon}</Icon>
