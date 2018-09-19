@@ -17,6 +17,8 @@ import InputTest from '../test/inputTest'
 import AlertTest from '../test/alertTest'
 
 import Icon from '@material-ui/core/Icon'
+import SwipeableDrawer from '@material-ui/core/Drawer'
+import Drawer from '../components/drawer'
 
 const GlobalVariables = styled.div`
 	--inner-container-width: 960px;
@@ -78,12 +80,26 @@ class Layout extends React.Component {
 					]}
 				/>
 				<Header
-					headerDrawerOpen={this.state.headerDrawerOpen}
-					navItems={data.site.siteMetadata.navItems}
 					toggleDrawer={this.toggleDrawer.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
-					navFooterText={data.site.siteMetadata.navFooterText}
 				/>
+
+				<SwipeableDrawer
+					open={this.state.headerDrawerOpen}
+					onClose={this.toggleDrawer.bind(this)}
+				>
+					<div
+						tabIndex={0}
+						role="button"
+						onClick={this.props.toggleDrawer}
+						onKeyDown={this.props.toggleDrawer}
+					>
+						<Drawer
+							navItems={data.site.siteMetadata.navItems}
+							navFooterText={data.site.siteMetadata.navFooterText}
+						/>
+					</div>
+				</SwipeableDrawer>
 
 				<ContentComponent
 					heading="Test Components"
