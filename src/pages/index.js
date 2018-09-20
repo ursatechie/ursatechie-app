@@ -3,11 +3,19 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 import Typography from '@material-ui/core/Typography'
+
+import ContentComponent from '../components/contentComp'
 import CardComp from '../components/cardComp'
 import GridListComp from '../components/gridListComp'
 
 const IndexPage = ({ children, data }) => (
 	<div>
+		{/* heading="Who I Am" */}
+		<ContentComponent
+			heading="Lorem Lorem"
+			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
+		/>
+
 		<Typography variant="headline" component="h1">
 			Links
 		</Typography>

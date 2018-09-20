@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper'
 
 const ContentCompWrapper = styled.div`
 	background: var(--primary-light);
-	margin: 0 auto;
+	margin: 0 calc(var(--body-padding-x) * -1);
 
 	a {
 		color: black;
@@ -13,14 +13,14 @@ const ContentCompWrapper = styled.div`
 `
 const S__Paper = styled(Paper)`
 	&& {
-		align-items: ${props => (props.left ? 'flex-start' : 'center')};
+		align-items: ${props => (props.center ? 'center' : 'flex-start')};
 		background: var(--primary);
 		color: var(--white);
 		display: flex;
 		flex-direction: column;
 		margin: 0 auto;
 		max-width: var(--inner-container-width);
-		padding: 10px;
+		padding: 50px;
 
 		> * {
 			margin-bottom: 10px;
@@ -37,9 +37,9 @@ const Heading = styled.div`
 
 const Text = styled.div``
 
-const Content = ({ children, heading, text, left, imgSrc }) => (
+const Content = ({ children, heading, text, center, imgSrc }) => (
 	<ContentCompWrapper>
-		<S__Paper elevation={5} left={left}>
+		<S__Paper elevation={5} center={center}>
 			<Image src={imgSrc} />
 			<Heading>{heading}</Heading>
 			<Text>{text}</Text>

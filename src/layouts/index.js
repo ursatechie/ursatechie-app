@@ -44,11 +44,15 @@ const GlobalVariables = styled.div`
 	--color3: rgba(147, 149, 211, 1);
 	--color4: rgba(179, 183, 238, 1);
 	--color5: rgba(251, 249, 255, 1);
+
+	--body-padding-x: 20px;
 `
 
 const Body = styled(Paper)`
-	padding: 0px 1.0875rem 1.45rem;
-	padding-top: 0;
+	&& {
+		border-radius: 0;
+		padding: 0 var(--body-padding-x);
+	}
 `
 
 class Layout extends React.Component {
