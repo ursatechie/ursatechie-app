@@ -14,6 +14,13 @@ import Imports from '../components/imports'
 import SideNavigation from '../components/sideNavigation'
 
 const GlobalVariables = styled.div`
+	margin: 0 10px;
+
+	> * {
+		margin: 0 auto;
+		max-width: var(--inner-container-width);
+	}
+
 	--inner-container-width: 960px;
 
 	--h1: 36px;
@@ -40,8 +47,6 @@ const GlobalVariables = styled.div`
 `
 
 const Body = styled(Paper)`
-	margin: 0 auto;
-	max-width: var(--inner-container-width);
 	padding: 0px 1.0875rem 1.45rem;
 	padding-top: 0;
 `
@@ -63,23 +68,23 @@ class Layout extends React.Component {
 				<Imports />
 
 				<Helmet
-					title={data.site.siteMetadata.title}
 					meta={[
 						{ name: 'description', content: 'Sample' },
 						{ name: 'keywords', content: 'sample, something' },
 					]}
+					title={data.site.siteMetadata.title}
 				/>
 
 				<Header
-					toggleDrawer={this.toggleSideNavigation.bind(this)}
 					siteTitle={data.site.siteMetadata.title}
+					toggleDrawer={this.toggleSideNavigation.bind(this)}
 				/>
 
 				<SideNavigation
+					navFooterText={data.site.siteMetadata.navFooterText}
+					navItems={data.site.siteMetadata.navItems}
 					sideNavigationOpen={this.state.sideNavigationOpen}
 					toggleSideNavigation={this.toggleSideNavigation.bind(this)}
-					navItems={data.site.siteMetadata.navItems}
-					navFooterText={data.site.siteMetadata.navFooterText}
 				/>
 
 				<Body elevation={10}>{children()}</Body>
