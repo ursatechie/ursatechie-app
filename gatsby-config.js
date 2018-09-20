@@ -3,6 +3,7 @@ module.exports = {
 		title: 'Documentation',
 		pageLinks: [
 			'index',
+			'test',
 			'404',
 			'material-ui',
 			'typographyPage',

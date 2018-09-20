@@ -40,17 +40,18 @@ class Footer extends React.Component {
 			<S__Footer elevation={10}>
 				<BottomNavigation value={value} onChange={this.handleChange} showLabels>
 					<BottomNavigationAction
-						label="Back"
 						icon={<ChevronLeftIcon />}
+						label="Back"
 						onClick={this.goBack}
 					/>
 					<BottomNavigationAction
+						icon={<PanoramaFishEyeIcon />}
 						label="Home"
-						icon={<PanoramaFishEyeIcon onClick={this.goHome} />}
+						onClick={this.goHome}
 					/>
 					<BottomNavigationAction
-						label="Drawer"
 						icon={<ExpandLessIcon />}
+						label="Drawer"
 						onClick={this.props.toggleDrawer}
 					/>
 				</BottomNavigation>
