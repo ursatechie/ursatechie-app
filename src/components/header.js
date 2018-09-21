@@ -10,10 +10,10 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 class Header extends React.Component {
 	render() {
-		const { siteTitle, navItems, navFooterText } = this.props
+		const { siteTitle, navItems, navFooterText, elevation } = this.props
 
 		return (
-			<AppBar position="static" color="default">
+			<AppBar position="static" color="default" elevation={elevation}>
 				<Toolbar>
 					<IconButton
 						color="inherit"

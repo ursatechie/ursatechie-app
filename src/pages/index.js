@@ -1,3 +1,4 @@
+// https://itnext.io/writing-customizable-styled-react-components-51d38ed20461
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
@@ -11,6 +12,17 @@ import GridListComp from '../components/gridListComp'
 const IndexPage = ({ children, data }) => (
 	<div>
 		{/* heading="Who I Am" */}
+		<ContentComponent
+			heading="Lorem Lorem"
+			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
+		/>
+
+		<ContentComponent
+			heading="Lorem Lorem"
+			light
+			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
+		/>
+
 		<ContentComponent
 			heading="Lorem Lorem"
 			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."

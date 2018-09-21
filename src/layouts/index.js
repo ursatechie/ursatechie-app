@@ -39,6 +39,10 @@ const GlobalVariables = styled.div`
 	--gray: rgba(162, 163, 187, 1); /* #A2A3BB */
 	--black: rgba(0, 8, 7, 1); /* #000807 */
 
+	--warning: #ffc107;
+	--danger: #dc3545;
+	--success: #28a745;
+
 	--color1: rgba(0, 8, 7, 1);
 	--color2: rgba(162, 163, 187, 1);
 	--color3: rgba(147, 149, 211, 1);
@@ -80,6 +84,7 @@ class Layout extends React.Component {
 				/>
 
 				<Header
+					elevation={10}
 					siteTitle={data.site.siteMetadata.title}
 					toggleDrawer={this.toggleSideNavigation.bind(this)}
 				/>

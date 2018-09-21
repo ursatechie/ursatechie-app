@@ -14,7 +14,8 @@ const ContentCompWrapper = styled.div`
 const S__Paper = styled(Paper)`
 	&& {
 		align-items: ${props => (props.center ? 'center' : 'flex-start')};
-		background: var(--primary);
+		background: ${props =>
+			props.light ? 'var(--primary-light)' : 'var(--primary)'};
 		color: var(--white);
 		display: flex;
 		flex-direction: column;
@@ -37,9 +38,9 @@ const Heading = styled.div`
 
 const Text = styled.div``
 
-const Content = ({ children, heading, text, center, imgSrc }) => (
+const Content = ({ children, heading, light, text, center, imgSrc }) => (
 	<ContentCompWrapper>
-		<S__Paper elevation={5} center={center}>
+		<S__Paper elevation={5} light={light} center={center}>
 			<Image src={imgSrc} />
 			<Heading>{heading}</Heading>
 			<Text>{text}</Text>
