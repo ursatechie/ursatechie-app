@@ -6,7 +6,7 @@ import Icon from '@material-ui/core/Icon'
 
 import heroImage from '../images/jump.jpg'
 import ContentComponent from '../components/contentComp'
-import * as Button from '../components/button'
+import Button from '../components/button'
 import InputTest from '../test/inputTest'
 import AlertTest from '../test/alertTest'
 
@@ -23,13 +23,11 @@ const TestPage = () => (
 
 			{/* <Button>Button</Button> */}
 
-			<Button.Primary>Button</Button.Primary>
+			<Button color="primary">Button</Button>
 
-			<Button.Warning>Button</Button.Warning>
+			<Button color="secondary">Button</Button>
 
-			<Button.Danger>Button</Button.Danger>
-
-			<Button.Success>Button</Button.Success>
+			<Button color="light">Button</Button>
 		</ContentComponent>
 	</div>
 )

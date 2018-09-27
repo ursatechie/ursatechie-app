@@ -1,21 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TYPES = {
-	PRIMARY: 'primary',
-	WARNING: 'warning',
-	DANGER: 'danger',
-	SUCCESS: 'success',
-}
+// const TYPES = {
+// 	PRIMARY: 'primary',
+// 	WARNING: 'warning',
+// 	DANGER: 'danger',
+// 	SUCCESS: 'success',
+// }
 
-export const SIZES = {
-	SMALL: 'small',
-	MEDIUM: 'medium',
-	LARGE: 'large',
-}
+// export const SIZES = {
+// 	SMALL: 'small',
+// 	MEDIUM: 'medium',
+// 	LARGE: 'large',
+// }
 
-const BaseButton = styled.button`
-	background: var(--primary);
+const Button = styled.button`
+	background: ${props =>
+		props.color == 'secondary'
+			? 'var(--secondary)'
+			: props.color == 'light'
+				? 'var(--primary-light)'
+				: 'var(--primary)'};
 	border-radius: 4px;
 	color: white;
 
@@ -29,54 +34,54 @@ const BaseButton = styled.button`
 // 	styles[ buttonSize || SIZES.MEDIUM ]
 //   )
 
-const Button2 = ({
-	children,
-	onClick,
-	type,
-	disabled,
-	buttonType,
-	buttonSize,
-}) => (
-	<BaseButton type={type} disabled={disabled} onClick={onClick}>
-		{children} - hey
-	</BaseButton>
-)
+// const Button2 = ({
+// 	children,
+// 	onClick,
+// 	type,
+// 	disabled,
+// 	buttonType,
+// 	buttonSize,
+// }) => (
+// 	<Button type={type} disabled={disabled} onClick={onClick}>
+// 		{children} - hey
+// 	</Button>
+// )
 
-const Primary = styled(Button2)`
-	background: var(--primary);
-	color: var(--white);
-`
+// const Primary = styled(Button2)`
+// 	background: var(--primary);
+// 	color: var(--white);
+// `
 
-const Warning = styled(Button2)`
-	background: var(--warning);
-	color: var(--white);
-`
+// const Warning = styled(Button2)`
+// 	background: var(--warning);
+// 	color: var(--white);
+// `
 
-const Danger = styled(Button2)`
-	background: var(--danger);
-	color: var(--white);
-`
+// const Danger = styled(Button2)`
+// 	background: var(--danger);
+// 	color: var(--white);
+// `
 
-const Success = styled(Button2)`
-	&& {
-		background: var(--success) !important;
-		color: black !important;
-	}
-`
+// const Success = styled(Button2)`
+// 	&& {
+// 		background: var(--success) !important;
+// 		color: black !important;
+// 	}
+// `
 
 // export const Primary = props => (
-// 	<BaseButton {...props} buttonType={TYPES.PRIMARY} />
+// 	<Button {...props} buttonType={TYPES.PRIMARY} />
 // )
 // export const Warning = props => (
-// 	<BaseButton {...props} buttonType={TYPES.WARNING} />
+// 	<Button {...props} buttonType={TYPES.WARNING} />
 // )
 // export const Danger = props => (
-// 	<BaseButton {...props} buttonType={TYPES.DANGER} />
+// 	<Button {...props} buttonType={TYPES.DANGER} />
 // )
 // export const Success = props => (
-// 	<BaseButton {...props} buttonType={TYPES.SUCCESS} />
+// 	<Button {...props} buttonType={TYPES.SUCCESS} />
 // )
 
-// export default Button
+export default Button
 
-export { Primary, Warning, Danger, Success }
+// export { Primary, Warning, Danger, Success }
