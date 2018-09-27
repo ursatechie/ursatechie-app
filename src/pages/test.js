@@ -21,13 +21,13 @@ const TestPage = () => (
 			<InputTest />
 			<AlertTest />
 
-			{/* <Button>Button</Button> */}
+			<Button>Button</Button>
 
-			<Button color="primary">Button</Button>
+			<Button primary>Button</Button>
 
-			<Button color="secondary">Button</Button>
+			<Button secondary>Button</Button>
 
-			<Button color="light">Button</Button>
+			<Button light>Button</Button>
 		</ContentComponent>
 	</div>
 )

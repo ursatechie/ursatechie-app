@@ -14,20 +14,37 @@ import styled from 'styled-components'
 // 	LARGE: 'large',
 // }
 
+// https://medium.com/@perezpriego7/css-evolution-from-css-sass-bem-css-modules-to-styled-components-d4c1da3a659b
 const Button = styled.button`
-	background: ${props =>
-		props.color == 'secondary'
-			? 'var(--secondary)'
-			: props.color == 'light'
-				? 'var(--primary-light)'
-				: 'var(--primary)'};
 	border-radius: 4px;
-	color: white;
+	color: ${props => (props.color ? 'white' : '')};
 
 	&:hover {
 		cursor: pointer;
 	}
+
+	${props =>
+		props.primary &&
+		`
+		background: var(--primary);
+		color: white;
+	`};
+
+	${props =>
+		props.secondary &&
+		`
+		background: var(--secondary);
+		color: white;
+	`};
+
+	${props =>
+		props.light &&
+		`
+		background: var(--primary-light);
+		color: white;
+	`};
 `
+
 // classnames=(
 // 	styles.button,
 // 	styles[ buttonType ]
