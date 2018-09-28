@@ -1,7 +1,32 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Documentation',
+		// https://material.io/tools/icons/?style=baseline
+		navItems: [
+			{
+				link: '/',
+				text: 'Home',
+				icon: 'face',
+			},
+			{
+				link: '/projects',
+				text: 'Projects',
+				icon: 'work',
+			},
+			{
+				link: '/typographyPage',
+				text: 'Typography',
+				icon: 'font_download',
+			},
+			{
+				link: '/test',
+				text: 'Test',
+				icon: 'fitness_center',
+			},
+		],
+		navFooterText: 'Tyler Wong J, 2018',
 		pageLinks: [
+			'projects',
 			'index',
 			'test',
 			'404',
@@ -15,12 +40,12 @@ module.exports = {
 		],
 		projects: [
 			{
-				img: '1asdfasdfas',
+				img: 'contemplative-reptile.jpg',
 				title: 'title',
 				author: 'author',
 			},
 			{
-				img: '21asdfasdfas',
+				img: 'jump.jpg',
 				title: 'title',
 				author: 'author',
 			},
@@ -40,17 +65,6 @@ module.exports = {
 				author: 'author',
 			},
 		],
-		navItems: [
-			{
-				icon: 'inbox',
-				text: 'Home',
-			},
-			{
-				icon: 'drafts',
-				text: 'Typography',
-			},
-		],
-		navFooterText: 'Tyler Wong J, 2018',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

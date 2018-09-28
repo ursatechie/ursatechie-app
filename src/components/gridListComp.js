@@ -33,12 +33,12 @@ const GridListComp = ({ projects }) => (
 				<ListSubheader component="div">December</ListSubheader>
 			</GridListTile>
 
-			{projects.map(tile => (
-				<GridListTile key={tile.img}>
-					<img src={tile.img} alt={tile.title} />
+			{projects.map(project => (
+				<GridListTile key={project.img}>
+					<img src={project.img} alt={project.title} />
 					<GridListTileBar
-						title={tile.title}
-						subtitle={<span>by: {tile.author}</span>}
+						title={project.title}
+						subtitle={<span>by: {project.author}</span>}
 						actionIcon={
 							<TIconButton>
 								<InfoIcon />

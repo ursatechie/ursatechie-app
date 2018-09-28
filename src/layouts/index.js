@@ -123,6 +123,7 @@ export const query = graphql`
 				navItems {
 					icon
 					text
+					link
 				}
 				navFooterText
 			}
