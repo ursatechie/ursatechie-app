@@ -15,30 +15,7 @@ import InfoIcon from '@material-ui/icons/Info'
 import ContentComponent from '../components/contentComp'
 import CardComp from '../components/cardComp'
 
-import image1 from '../images/jump.jpg'
-
-const tileData = [
-	{
-		img: image1,
-		title: 'Image',
-		author: 'author',
-	},
-	{
-		img: image1,
-		title: 'Image',
-		author: 'author',
-	},
-	{
-		img: image1,
-		title: 'Image',
-		author: 'author',
-	},
-	{
-		img: image1,
-		title: 'Image',
-		author: 'author',
-	},
-]
+import projects from '../data/projectsData'
 
 const TGridListWrapper = styled.div`
 	background-color: var(--white);
@@ -60,15 +37,15 @@ const GridListComp = () => (
 	<TGridListWrapper>
 		<TGridList cellHeight={180}>
 			<GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-				<ListSubheader component="div">December</ListSubheader>
+				<ListSubheader component="div">Projects</ListSubheader>
 			</GridListTile>
 
-			{tileData.map(tile => (
-				<GridListTile key={tile.img}>
-					<img src={tile.img} alt={tile.title} />
+			{projects.map(project => (
+				<GridListTile key={project.img}>
+					<img src={project.img} alt={project.title} />
 					<GridListTileBar
-						title={tile.title}
-						subtitle={<span>by: {tile.author}</span>}
+						title={project.title}
+						subtitle={<span>by: {project.author}</span>}
 						actionIcon={
 							<TIconButton>
 								<InfoIcon />
