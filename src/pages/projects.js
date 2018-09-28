@@ -15,7 +15,30 @@ import InfoIcon from '@material-ui/icons/Info'
 import ContentComponent from '../components/contentComp'
 import CardComp from '../components/cardComp'
 
-import imageJump from '../images/jump.jpg'
+import image1 from '../images/jump.jpg'
+
+const tileData = [
+	{
+		img: image1,
+		title: 'Image',
+		author: 'author',
+	},
+	{
+		img: image1,
+		title: 'Image',
+		author: 'author',
+	},
+	{
+		img: image1,
+		title: 'Image',
+		author: 'author',
+	},
+	{
+		img: image1,
+		title: 'Image',
+		author: 'author',
+	},
+]
 
 const TGridListWrapper = styled.div`
 	background-color: var(--white);
@@ -40,18 +63,20 @@ const GridListComp = () => (
 				<ListSubheader component="div">December</ListSubheader>
 			</GridListTile>
 
-			<GridListTile>
-				<img src={imageJump} alt={'jump - image'} />
-				<GridListTileBar
-					title={'Project Title'}
-					subtitle={<span>by: {'Project Author'}</span>}
-					actionIcon={
-						<TIconButton>
-							<InfoIcon />
-						</TIconButton>
-					}
-				/>
-			</GridListTile>
+			{tileData.map(tile => (
+				<GridListTile key={tile.img}>
+					<img src={tile.img} alt={tile.title} />
+					<GridListTileBar
+						title={tile.title}
+						subtitle={<span>by: {tile.author}</span>}
+						actionIcon={
+							<TIconButton>
+								<InfoIcon />
+							</TIconButton>
+						}
+					/>
+				</GridListTile>
+			))}
 		</TGridList>
 	</TGridListWrapper>
 )
