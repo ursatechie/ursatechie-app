@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography'
 
 import ContentComponent from '../components/contentComp'
 import CardComp from '../components/cardComp'
-import GridListComp from '../components/gridListComp'
 
 const IndexPage = ({ children, data }) => (
 	<div>
@@ -59,8 +58,6 @@ const IndexPage = ({ children, data }) => (
 			</div>
 		</div>
 		<CardComp />
-
-		<GridListComp projects={data.site.siteMetadata.projects} />
 	</div>
 )
 
@@ -71,11 +68,6 @@ export const query = graphql`
 		site {
 			siteMetadata {
 				pageLinks
-				projects {
-					img
-					author
-					title
-				}
 			}
 		}
 	}
