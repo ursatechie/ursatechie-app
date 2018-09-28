@@ -12,6 +12,7 @@ const IndexPage = ({ children, data }) => (
 	<div>
 		{/* heading="Who I Am" */}
 		<ContentComponent
+			primary
 			heading="Lorem Lorem"
 			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
 		/>
@@ -19,6 +20,12 @@ const IndexPage = ({ children, data }) => (
 		<ContentComponent
 			heading="Lorem Lorem"
 			light
+			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
+		/>
+
+		<ContentComponent
+			secondary
+			heading="Lorem Lorem"
 			text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla molestiae porro esse fugit, quae facere corrupti eligendi! Possimus atque illo sapiente minus, tempore, illum accusamus animi minima omnis, impedit quasi."
 		/>
 
