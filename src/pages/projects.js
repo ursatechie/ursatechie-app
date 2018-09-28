@@ -15,6 +15,8 @@ import InfoIcon from '@material-ui/icons/Info'
 import ContentComponent from '../components/contentComp'
 import CardComp from '../components/cardComp'
 
+import imageJump from '../images/jump.jpg'
+
 const TGridListWrapper = styled.div`
 	background-color: var(--white);
 	display: flex;
@@ -31,32 +33,28 @@ const TIconButton = styled(IconButton)`
 	color: rgba(255, 255, 255, 0.54);
 `
 
-const GridListComp = ({ projects }) => <div />
-{
-	/* <TGridListWrapper>
+const GridListComp = () => (
+	<TGridListWrapper>
 		<TGridList cellHeight={180}>
 			<GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
 				<ListSubheader component="div">December</ListSubheader>
 			</GridListTile>
 
-			{projects.map(project => (
-				<GridListTile key={project.img}>
-					<img src={projects[0].img} alt={project.title} />
-					<img src={awesomeImg} alt={project.title} />
-					<GridListTileBar
-						title={project.title}
-						subtitle={<span>by: {project.author}</span>}
-						actionIcon={
-							<TIconButton>
-								<InfoIcon />
-							</TIconButton>
-						}
-					/>
-				</GridListTile>
-			))}
+			<GridListTile>
+				<img src={imageJump} alt={'jump - image'} />
+				<GridListTileBar
+					title={'Project Title'}
+					subtitle={<span>by: {'Project Author'}</span>}
+					actionIcon={
+						<TIconButton>
+							<InfoIcon />
+						</TIconButton>
+					}
+				/>
+			</GridListTile>
 		</TGridList>
-	</TGridListWrapper> */
-}
+	</TGridListWrapper>
+)
 
 const ProjectsPage = ({ children, data }) => (
 	<div>
