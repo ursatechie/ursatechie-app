@@ -5,8 +5,11 @@ import styled from 'styled-components'
 import Icon from '@material-ui/core/Icon'
 
 import heroImage from '../images/jump.jpg'
+
 import ContentComponent from '../components/contentComp'
 import Button from '../components/button'
+import SnackBarComp from '../components/snackBarComp'
+
 import InputTest from '../test/inputTest'
 import AlertTest from '../test/alertTest'
 
@@ -28,6 +31,8 @@ const TestPage = () => (
 			<Button secondary>Button</Button>
 
 			<Button light>Button</Button>
+
+			<SnackBarComp message="Contact Me" />
 		</ContentComponent>
 	</div>
 )
